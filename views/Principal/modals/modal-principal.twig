@@ -1,0 +1,289 @@
+
+<!-- Modal -->
+        <div class="modal fade" id="modal-respuesta" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog " role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center" id="myModalLabel">Procesos </h4>
+              </div>
+              <div class="modal-body-respuesta">
+                <!--  formulario de participantes -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+   <!-- Modal -->
+        <div class="modal fade" id="modal-contactenos" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center text-primary" id="myModalLabel">CONTACTENOS</h4>
+              </div>
+              <div class="modal-body-contactenos">
+                       <br><br>
+                    <form id="form-contactenos" class="text-danger">
+                      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <label>NOMBE COMPLETO: </label>
+                        <div class="input-group">
+                          <span class="input-group-addon label-danger"><i class="fa fa-user-o text-white" aria-hidden="true"></i></span>
+                          <input type="text" class="form-control input-danger" name="name" placeholder="Digita tu nombre">
+                        </div>
+                      </div>
+                      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <label>CORREO ELECTRONICO: </label>
+                        <div class="input-group">
+                          <span class="input-group-addon label-danger"><i class="fa  fa-envelope-o text-white" aria-hidden="true"></i></span>
+                          <input type="text" class="form-control bg-danger" name="email" placeholder="Digita el correo">
+                        </div>
+                      </div>
+                      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <label>MENSAJE: </label>
+                          <textarea class="form-control bg-danger" name="message" rows="5"></textarea>
+                          <label>___________________________________________________________________________________
+                          <label>               ALTA ESPECIALIDAD SAS
+                          <label>Carrera 37 A 29 56 Int. 2207 El Poblado Medellin CEL 3208858086 - 3144836423
+                          <label>Correo: info@altaespecialidad.co - luismoyar@hotmail.com 
+                      </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="enviarCorreo">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- Modal -->
+        <div class="modal fade" id="modal-ingresar" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                 <form class="form_entrar col-md-12" action="{{url_base}}/Users/ingresarFuncionario" method="POST">
+                    <h4 class="text-center text-white">Ingreso Plataforma</h4>
+                    <div class="form-group">
+                      <input type="text" name="nick" class="form-control input-lg" placeholder="nick">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="pass" class="form-control input-lg" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-info btn-lg btn-block">Entrar</button>
+                    </div>
+                  </form>
+                   
+              </div>
+              <div class="modal-footer">
+      .
+              </div>
+            </div>
+          </div>
+        </div>
+   
+   <!-- Modal -->
+        <div class="modal fade" id="modal-buscaProceso" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog " role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center" id="myModalLabel"></h4>
+              </div>
+              <div class="modal-body">
+            
+                 <div id="caja_respuesta"></div>
+                    <h2 class="alert alert-dismissible alert-primary text-center">Nombre, Identificacion o Proceso</h2>
+                    <form class="navbar-form rojo " id="form-create-dueno" role="form" >
+                      <div class="input-group ">
+                          <input type="text"  id="datos" class="form-control" placeholder="Nombre, Identificacion o Proceso" />
+                      </div>
+                      <button id="buscar_proceso" class="btn btn-danger btn-lg btn-raised " data-toggle="modal" data-target="#modal-respuesta">Buscar <i class="fa fa-search"></i> </button>
+                  </form>
+                </div>
+  
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal-pazYSalvo" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog " role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center" id="myModalLabel">Procesos </h4>
+              </div>
+              <div class="modal-body-respuesta">
+                <!--  formulario de participantes -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Modal -->
+        <div class="modal fade" id="modal-Politicas" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body text-black">
+                   <h4 class="text-center text-danger">POLITICAS DE USO</h4>
+                   <br>
+                   <br>
+                   <h4 class="text-left text-danger">1.QUIENES SOMOS.</h4>
+                   <br>
+                   <p class="text-justify">SIEX.COM.CO es un software especializado en derecho procesal administrativo que crea, impulsa, consulta y notifica los diferentes expedientes producidos por la administración pública en asuntos Judiciales, Policivos, Cobro coactivo, PQR, Disciplinarios, fiscales y Talento Humano, desarrollado por ALTA ESPECIALIDAD SAS NIT 900918191-4, y protegido por las leyes colombianas de derechos de autor.</p>
+                   <br>
+                   <pc class="text-justify">
+                   Nuestro producto está basado en las políticas de Gobierno en Línea y busca satisfacer las siguientes necesidades Administrativas
+                   </p>
+                   <br>
+                   <br>
+                   <p class="text-justify">
+                   1. TIC para Servicios. Comprende la provisión de trámites y servicios a través de medios electrónicos, enfocados a dar solución a las principales necesidades y demandas de los ciudadanos y empresas, en condiciones de calidad, facilidad de uso y mejoramiento continuo.  
+                   </p>
+                   <br>
+                   <p class="text-justify">
+                   2. TIC para el Gobierno abierto. Comprende las actividades encaminadas a fomentar la construcción de un Estado más transparente, participativo y colaborativo involucrando a los diferentes actores en los asuntos públicos mediante el uso de las Tecnologías de la Información y las Comunicaciones.  
+                   </p>
+                   <br>
+                   <p class="text-justify">
+                   3. TIC para la Gestión. Comprende la planeación y gestión tecnológica, la mejora de procesos internos y el intercambio de información. Igualmente, la gestión y aprovechamiento de la información para el análisis, toma de decisiones y el mejoramiento permanente, con un enfoque integral para una respuesta articulada de gobierno y para hacer más eficaz la gestión administrativa entre instituciones de Gobierno.
+                   </p>
+                   <br>
+                   <p class="text-justify">  
+                    4. Seguridad y privacidad de la Información. Comprende las acciones transversales a los demás componentes enunciados, tendientes a proteger la información y los sistemas de información, del acceso, uso, divulgación, interrupción o destrucción no autorizada.
+                   </p>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    Más información al Correo electrónico: <span class="text-info">info@siex.com.co</span>  o visite nuestra página <a href="http://www.altaespecialidad.co/" target="_blank">www.altaespecialidad.co</a>
+                   </p>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+                   <h4 class="text-left text-danger">2. RESERVA DE EXPEDIENTES</h4>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    Todos los expedientes abiertos por las Entidades Públicas o Privadas gozan de reserva legal, y solo podrán ser consultados por su titular, por tanto, las claves serán de exclusiva responsabilidad del titular.
+                   </p>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    La existencia de un expediente contra una determinada persona natural o jurídica es pública. SIEX, permite la búsqueda, pero no muestra su contenido hasta tanto no se valide la información con la fuente respectiva y se paguen los derechos correspondientes.
+                   </p>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    Los expedientes son construidos y cargados a este sitio por los clientes que adquieran nuestro aplicativo, por tanto, es responsabilidad de cada cliente la disponibilidad y veracidad de la información.
+                   </p>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    Los procesados pueden obtener copia del expediente a través de nuestro medio, previa autorización del titular otorgado a nuestra firma y cancelando los derechos respectivos.
+                   </p>
+                   <br>
+                   <br>
+                   <h4 class="text-left text-danger">3. TRATAMIENTO DE LOS DATOS PERSONALES.</h4>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    Los datos personales solo se usarán para los fines de este software y gozan de total protección, pero podrán dársele un tratamiento posterior con fines históricos, estadísticos o científicos, sin vulnerar la privacidad de cada titular. <br><br>  
+                    Los datos suministrados directamente por titular, se considerarán exactos, dando cumplimiento así al principio de veracidad y calidad del dato, para mayor información consulte nuestras políticas de privacidad. <br><br>
+                    Los datos de carácter personal, serán tratados de forma legal acorde con nuestras políticas y tendrá las siguientes finalidades: Llevar a cabo el servicio de búsqueda usuarios/clientes. Realizar la autenticación de los usuarios/clientes con las fuentes respectivas. Efectuar el proceso de facturación a los usuarios/clientes. Atender las peticiones, quejas o reclamos elevadas por los usuarios/clientes u órdenes judiciales o administrativas. Garantizar los derechos de los usuarios/clientes ante servidores y contratistas que presten servicios tercerizados a SIEX. Una vez cese la necesidad de tratamiento de sus datos, los mismos podrán ser eliminados de las bases de SIEX, a solicitud del titular o por decisión unilateral. <br><br>
+                    Los datos personales y los expedientes pertenecen exclusivamente a los proveedores de la información, almacenada en sus hostings respectivos contratados para el efecto, excepto la información recogida directamente por el aplicativo. SIEX, solo facilita la intermediación entre los proveedores y sus usuarios. Sin embargo, la privacidad de los datos está en la seguridad del aplicativo y la validación de los titulares ante las entidades respectivas, política de SIEX de compromiso de garantía. Cualquier violación a este compromiso se debe reportar a <span class="text-info">soporte@siex.com.co</span> <br><br> 
+                    SIEX, sólo enviará datos personales a las siguientes personas, previa cancelación de los derechos: Al titular del dato, sus causahabientes o sus representantes legales. A las personas autorizadas por el titular del dato. A las personas autorizadas por el orden judicial o legal. En este último caso, de conformidad con lo que se ha establecido por la corte constitucional (Sentencia C-748 de 2011), solo se entregara información siempre y cuando la entidad pública o administrativa justifica su solicitud, indicando la relación entre la necesidad de obtener el dato requerido y el cumplimiento de sus funciones. <br><br>
+                    Los contratistas y terceros que eventualmente presten servicios a SIEX, están sometidos a las mismas reglas contenidas en este instructivo y las establecidas en la ley 1581 de 2012 y sus decretos
+                   </p>
+                   <br>
+                   <br>
+                   <h4 class="text-left text-danger">4. MARCO NORMATIVO.</h4>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    Con fundamente en el artículo 15 de la constitución política de Colombia en concordancia con la ley estatutaria 1581 de 2012 y los decretos reglamentarios 1377 de 2013 y 886 de 2014, SIEX, se hace responsable frente a la recolección de datos personales, el contenido de la política de privacidad y el registro nacional de base de datos, con el propósito de garantizar a los usuarios que sus datos solo se usarán para los fines de este aplicativo.
+                    reglamentarios.
+                   </p>
+                   <br>
+                   <br>
+                   <h4 class="text-left text-danger">5. RESTRICCION DEL SERVICIO.</h4>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    Queda prohibido utilizar el servicio de SIEX, para infringir derechos de terceros de conformidad con la ley 1273 de 2009, la ley 1581 de 2012 y los decretos 1377 de 2013 y 886 de 2014 y las demás normas que las modifiquen o complementen. Se prohíbe la utilización del servicio con fines ilícitos. <br><br>
+                    La disponibilidad del servicio depende totalmente de los proveedores de información, por tanto, SIEX no asume responsabilidad por la disponibilidad de la información y no garantiza que la misma esté libre de errores. <br><br>
+                    SIEX, presta un servicio de exclusiva intermediación, facilitando el direccionamiento de los usuarios/clientes a la información que reposa de manera pública en las páginas de los proveedores de información, con excepción de los expedientes los cuales son administrados por cada entidad y su uso y consulta se limita a la reserva legal.
+                   </p>
+                   <br>
+                   <br>
+                   <h4 class="text-left text-danger">6. INDEMNIDAD DE SIEX</h4>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    Los usuarios/clientes reconocen que la ejecución del servicio genera riesgos intrínsecos a la tecnología y que los datos son suministrados por los proveedores del servicio y por los mismos suscriptores, por tanto, los usuarios/clientes declaran mantener indemne a SIEX/ALTA ESPECIALIDADA SAS ante cualquier posible reclamo, demanda, multa, penalidad, sanción, indemnización y/o resarcimiento, por el tratamiento inadecuado de la información de responsabilidad exclusiva de los usuarios/clientes e incluye cualquier costa judicial y/o honorarios legales incurridos. <br><br>
+                    En cualquier evento que se logre probar actuación u omisión de SIEX / ALTA ESPECIALIDAD SAS, contraria a los presentes términos y condiciones, y que derive en la indemnización a los usuarios/clientes, la misma solo se realizará hasta por un máximo del valor pagado por el usuario/cliente por la contratación de los servicios o perjuicios pactados.
+                   </p>
+                   <br>
+                   <br>
+                   <h4 class="text-left text-danger">7. CONTRATO DE TERMINOS Y CONDICIONES.</h4>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    El presente acuerdo de Términos y Condiciones, aceptado por las partes, constituye el vínculo legal entre el usuario/cliente y ALTA ESPECIALIDAD SAS, responsable del aplicativo, adicional a los acuerdos y contratos privados que se firmen con sus clientes. <br><br> 
+                    Los Términos y Condiciones establecidos en este acuerdo se rigen por las leyes vigentes del Estado Colombiano. Los usuarios/clientes que utilicen nuestro servicio fuera de Colombia, lo harán en el marco del cumplimiento de las normas del Estado Colombiano. Este acuerdo no crea ningún contrato de sociedad, de mandato, de franquicia, o relación laboral entre usuarios/clientes y ALTA ESPECIALIDAD SAS. <br><br>
+                    ALTA ESPECIALIDAD SAS, se reserva el derecho de revisar y modificar el contenido de los términos y condiciones en cualquier momento y sin previo aviso a los usuarios y clientes. <br><br> 
+                    Se facturará a nombre del suscriptor una vez cancele el valor de la suscripción o se cumplan las condiciones para el efecto.
+                   </p>
+                   <br>
+                   <br>
+                    <h4 class="text-left text-danger">8. PROVEEDORES DE INFORMACIÓN </h4>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    Son proveedores de información los Municipios, Departamentos y demás entidades públicas o privadas que contraten con ALTA ESPECIALIDAD, los servicios de administración de expedientes a través de la web, también lo serán todas las entidades públicas o privadas que quieran publicar la relación de expedientes llevados contra terceros en este portal.
+                   </p>
+                   <br>
+                   <br>
+                    <h4 class="text-left text-danger">9. ASISTENCIA TECNICA Y SOPORTE </h4>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    SIEX, solo está obligado a darle asistencia técnica y soporte aquellas entidades públicas o privadas que contraten el servicio de expedientes en la WEB, sin embargo, los usuarios de consulta podrán colocarse en contacto con <span class="text-info">soporte@siex.com.co</span>, para resolver cualquier inquietud.
+                   </p>
+                   <br>
+                   <br>
+                   <h4 class="text-left text-danger">10. VIGENCIA DE LA PRESENTE POLÍTICA. </h4>
+                   <br>
+                   <br>
+                   <p class="text-justify">  
+                    La vigencia de las presentes políticas rige desde el momento de estar publicada en la página y no podrá modificarse sin la debida notificación a sus usuarios, a menos que contraríe la ley. 
+                   </p>
+                   <br>
+                   <br>
+
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="enviarCorreo">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>

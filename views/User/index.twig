@@ -1,0 +1,43 @@
+{# app/Resources/views/blog/index.html.twig #}
+{% extends 'principal.twig' %}
+
+{% block title %}Siex{% endblock %}
+
+{% block body %}
+<div class="row">
+    	<div class="col-lg-12">
+        	<ol class="breadcrumb">
+            	<li class="active">Participantes en los Procesos</li>
+        	</ol>
+    	</div>
+	</div>
+
+	<div class="col-md-12">
+		<a href="users/create" class="btn btn-primary"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Nuevo Participante</a><br><br>
+		<table id="table" class="table table-condensed table-hover table-bordered table-responsive">
+		 	<thead>
+		 		<th>#</th>
+		 		<th>NOMBRE</th>
+		 		<th>DOCUMENTO</th>
+		 		<th>EMAIL</th>
+		 		<th>DIRECCION</th>
+				<th><i class="fa fa-pencil-square-o text-success"></i></th>
+		 	</thead>
+		 	<tbody>
+		 		{% for data in datos %}
+		 		<tr>
+		 			<td>{{data.id_datos}}</td>
+		 			<td>{{data.nom_datos}}</td>
+		 			<td>{{data.num_dc}}</td>
+		 			<td>{{data.email}}</td>
+		 			<td>{{data.direccion}}</td>
+		 			<td><a href="users/edit/id/{{data.id_datos}}" class="btn btn-success">editar</a></td>
+		 		</tr>
+		 		 {% endfor %}
+		 	</tbody>
+		 </table>
+	</div>
+
+{% include 'Modals/modqals.principal.twig' %}
+{% endblock %}
+

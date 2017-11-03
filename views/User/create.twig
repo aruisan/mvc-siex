@@ -1,0 +1,97 @@
+{# app/Resources/views/blog/index.html.twig #}
+{% extends 'principal.twig' %}
+
+{% block title %}Crear Persona{% endblock %}
+
+{% block body %}
+<div class="row"  id="migas">
+    	<div class="col-lg-12">
+        	<ol class="breadcrumb">
+                <li> <button class="btn btn-link" id="cargarParticipantes">Ver Participantes</button></li>       
+            	<li class="active">Formulario Creacion de Participantes</li>
+        	</ol>
+    	</div>
+	</div>
+
+	<div class="col-md-12">
+		<form id="form-create">
+             <div class="row">
+              <div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-4">
+                <label>NUMERO IDENTIFICACION: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-cc" aria-hidden="true"></i></span>
+                    <input type="number" class="form-control" name="dc" id="dc" value="{{datos.num_dc}}">
+                    <input type="hidden" name="id" value="{{datos.id_datos}}>
+                </div>
+                <small class="form-text text-muted">identificacion participante del proceso</small>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+    			<label>NOMBRE O RAZON SOCIAL: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+    			    <input type="text" class="form-control" name="nom" value="{{datos.nom_datos}}>
+                </div>
+    			<small class="form-text text-muted">Nombre completo de el participante</small>
+  			</div>
+            <div class="form-group col-xs-12 col-sm-2 col-md-3 col-lg-4">
+    			<label>PERSONA LEGAL: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                    <select name="persona" class="form-control" id="persona">
+                        <option value="NATURAL" >NATURAL</option>
+                        <option value="JURIDICA">JURIDICA</option>
+                    </select>
+                </div>
+    			<small class="form-text text-muted">selecciona si el participante es persona juridica o natural</small>
+  			</div>
+            </div>
+             
+
+            <div class="row">
+            <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+    			<label>CORREO ELECTRONICO: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+    			    <input type="text" class="form-control" name="email" value="{{datos.email_datos}}>
+                </div>
+    			<small class="form-text text-muted">correo electronico del participante a ingresar</small>
+  			</div>
+            <div class="form-group col-xs-12 col-sm-4 col-md-3 col-lg-4">
+    			<label>DIRECCION: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+    			    <input type="text" class="form-control" name="direccion">
+                </div>
+    			<small class="form-text text-muted">Direccion de residencia del participante</small>
+  			</div>
+            <div class="form-group col-xs-12 col-sm-2 col-md-3 col-lg-4">
+    			<label>TELEFONO: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+    			    <input type="text" class="form-control" name="telefono">
+                </div>
+    			<small class="form-text text-muted">telefono  del participante</small>
+  			</div>
+            </div>
+             <div class="row">
+            <div id="representante" class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4 ocultar">
+                <label>Representante Legal: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="representante">
+                </div>
+                <small class="form-text text-muted">Nombre Completo Representante Legal</small>
+            </div>
+            </div>
+             
+           
+
+            <div class="row">
+                <div class="form-group">
+                    <button class="btn btn-danger ocultar" id="cancelarStoreParticipante">Cancelar</button>  
+                    <button class="btn btn-primary btn-block" id="storeParticipante">Nuevo Participante</button>						  	
+                </div>
+            </div>
+        </form>
+	</div>
+{% endblock %}
