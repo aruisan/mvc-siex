@@ -14,10 +14,10 @@ class Config
 	{
 		//CONFIGURACION DEL DOMINIO
 		define("PUERTO", ":8080");
-		define("NAME_SERVER", "/mvc/");
+		define("NAME_SERVER", $_SERVER["SERVER_NAME"]."".PUERTO.""."/mvc/");
 
 
-		return $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["SERVER_NAME"]."".PUERTO."".NAME_SERVER;
+		return $_SERVER["REQUEST_SCHEME"]."://".NAME_SERVER;
 	}
 	
 }
