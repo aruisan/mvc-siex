@@ -12,8 +12,12 @@ class Config
 
 	function url_base() 
 	{
+		//CONFIGURACION DEL DOMINIO
+		define("PUERTO", ":8080");
 		define("NAME_SERVER", "/mvc/");
-		return $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["SERVER_NAME"]."".NAME_SERVER;
+
+
+		return $_SERVER["REQUEST_SCHEME"]."://".$_SERVER["SERVER_NAME"]."".PUERTO."".NAME_SERVER;
 	}
 	
 }
